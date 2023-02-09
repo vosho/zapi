@@ -1,0 +1,23 @@
+Testing Msg From Backend:
+<span id="label" style="color: red">...</span>
+<div >
+    <button id="btn">Randomize Number</button>
+</div>
+<script>
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        console.log('XMLHttpRequest loaded');
+        document.getElementById("btn").addEventListener("click", function() {
+            xhttp.open("GET", "/api/v1/demo/random");
+            xhttp.send();
+        });
+    }
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var json = JSON.parse(this.responseText);
+          document.getElementById("label").innerHTML = json.result.data.code;
+        }
+     };
+    xhttp.open("GET", "/api/v1/demo/random");
+    xhttp.send();
+</script>

@@ -1,0 +1,2 @@
+class FinishException(BaseException):
+    pass

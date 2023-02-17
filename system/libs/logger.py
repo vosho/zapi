@@ -3,7 +3,7 @@ import logging
 from system.libs.kit import Kit
 
 
-class Logger:
+class Logging:
     def __init__(self, name, rotate=False):
         if rotate == 'date':
             suffix = Kit.date_now()

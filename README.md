@@ -102,7 +102,7 @@ class MqUser(BaseModel):
 Views are mapped into folders `/views`
 
 ## Run Server
-`python3 server`
+`python3 server.py`
 
 ## Tasks
 ZApi enables user to run task integrated with framework features<br />
@@ -125,13 +125,13 @@ class DemoTask(BaseTask):
 #### Example.json
 ```json
 {
-  "env": "example_evn_name",
   "prefix": "api/v1",
   "server": {
     "port": 3100
   },
+  "env": "db_evn_name",
   "dbsource": {
-    "example_evn_name": {
+    "db_evn_name": {
       "type": "mysql",
       "host": "127.0.0.1",
       "port": 3306,
@@ -143,3 +143,5 @@ class DemoTask(BaseTask):
 }
 ```
 
+### License
+MIT

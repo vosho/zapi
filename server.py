@@ -4,11 +4,11 @@ from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
 
 from system.libs.xapplication import XApplication
-from system.libs.logger import Logger
+from system.libs.logger import Logging
 
 
 def main():
-    Logger('server')
+    Logging('server')
     app = XApplication()
     http_server = HTTPServer(app)
     http_server.listen(app.cfg.server.port or 17002)

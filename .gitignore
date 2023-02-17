@@ -134,3 +134,4 @@ venv/
 run/*
 **/*.log
 config.json
+sync.sh
